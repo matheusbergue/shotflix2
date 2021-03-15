@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600|Source+Sans+Pro:300,400,500,600,700|Rubik:400,600,700">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Assistir fffffffffff Online  - Shotflix</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/jquery.js"></script>
+</head>
+<body id="body">
+    <!--Cabeçalho-->
+<header>
+    <div class="container-header">
+      <div class="logo"><a href="/"></a></div><!--logo-->
+      <div id="nav" class="nav search">
+        <nav>
+          <ul id="ul-header" style="list-style: none;">
+            <li><a href="/">Home</a></li>
+            <li><a href="/categorias/">Categorias</a></li>
+            <li><a href="/filmes/">Filmes</a></li>
+            <li><a href="/sobre/">Sobre</a></li>
+          </ul>
+        </nav>
+        <form id="form" action="">
+          <input autofocus autocomplete="off" placeholder="Pesquisar" type="search" name="" id="buscar">
+          <div title="Pesquisar" id="iconBuscar" class="icon-buscar"></div>
+        </form>
+      </div><!--nav-desktop search-->
+      <div id="iconMenu" class="icon-menu"></div><!--icon-menu-->
+      <div id="removeMenu" class="removeMenu"></div><!--icon-menu-->
+    </div><!--container-header-->
+</header>
+  <!--Fim cabeçalho-->
+
+    <main>
+        <div class="container">
+            <div class="pagina-post" style="background-image: url('ERRO-API');">
+                <div class="bg-pelicula">
+                    <div id="imgPoster" class="img-post">
+                        <div class="assistir-button">Assistir</div>
+                    </div>
+                    <div class="info-filme">
+                        <h1>fffffffffff</h1>
+                        <span><span id="dataFilme"></span>(BR) &bull; <span id="setCategorias"></span> &bull; <span id="filmeTemp"></span></span>
+                        <div class="buttons-filme">
+                            <div class="avaliacao-area">
+                                <a target="_blank" href="https://www.themoviedb.org/movie/"></a>
+                                <div class="avaliacao-button"><span id="tmdbAvaliacao"></span></div>
+                                <p>Avaliação TMDB</p>
+                            </div><!--avaliacao-container-->
+                            <div class="share-area">
+                                <div class="share-button"></div>
+                                <p>Compartilhar</p>
+                            </div>
+                        </div><!--buttons-filme-->
+                        <div class="sinopse">
+                            <h2 id="tagline"></h2>
+                            <span>Sinopse:</span>
+                            <p id="sinopse"></p>
+                        </div><!--sinopse-->
+                        <div class="players-area">
+                            <span>PLAYERS DISPONÍVEIS</span>
+                            <div class="line"></div>
+                            <div id="players" class="players">
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div><!--bg-pelicula-->
+
+
+            </div>
+
+
+            <div id="filmeArea" class="filme-area">
+                <div id="closeFilmeArea" class="close">X</div>
+                <div style="
+                    position: absolute;
+                    top: calc(50% - 4px);
+                    left: calc(50% - 100px);
+                    background-color: rgba(255, 0, 0, 0);
+                    width: 200px;
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #ffc267;
+                    text-transform: uppercase;
+                    z-index: -1;
+                ">Carregando Player...</div>
+                <div id="embedArea" class="embed-area"></div>
+            </div>
+
+            <div id="share" class="share">
+                <div id="closeShare" class="close">X</div>
+                <div class="whatsapp"><a target="_blank" href="https://api.whatsapp.com/send?text=/jekyll/update/assistir-teste2-copy-7-online/"></a></div>
+                <div class="facebook"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://jekyllrb.com/docs/liquid/filters/"></a></div>
+            </div>
+
+
+        </div><!--Container-->
+    </main>
+
+     <!--Footer-->
+
+ <footer>
+    <div class="container">
+        <div class="coluna">
+            <div class="logo"></div>
+            <h1>Assista seus filmes favoritos totalmente de graça no melhor indexador de filmes online</h1>
+            <p>Um agente da CIA conhecido como O Protagonista (John David Washington) é recrutado por uma organização misteriosa, chamada Tenet, para participar de uma missão de escala global. Eles precisam impedir que Andrei Sator (Kenneth Branagh), um renegado oligarca russo com meios de se comunicar com o futuro, inicie a Terceira Guerra Mundial. A organização está em posse de uma arma de fogo que consegue fazer o tempo correr ao contrário, acreditando que o objeto veio do futuro. Com essa habilidade em mãos, O Protagonista precisará usá-la como forma de se opor à ameaça que está por vir, impedindo que os planos de Sator se concretizem.</p>
+        </div>
+        <div class="coluna">
+        </div>
+        <div class="coluna">
+        </div>
+        <div class="clear"></div>
+    </div>
+    <span class="copy">&copy; shotflix 2021</span>
+ </footer>
+
+<!--Fim Footer-->
+    
+    <script>
+        const objetoFilme = `ERRO-API`.split('--')
+        //console.log(objetoFilme)
+        document.getElementById('imgPoster')
+        .style.backgroundImage = `url('${objetoFilme[7]}')` //Setar imagemPoster
+
+        document.getElementById('dataFilme')
+
+        .innerHTML = setDataFilme()
+
+        document.getElementById('filmeTemp')
+
+        .innerHTML = converter(objetoFilme[3]) //Setar duração
+
+        document.getElementById('tmdbAvaliacao')
+
+        .innerHTML = objetoFilme[5].replace('.','') +  //Setar avaliação
+
+        `<span style="font-size: 10px;position: relative;top: -7px;">%</span>`
+
+       if (objetoFilme[2].length > 1) {
+        document.getElementById('tagline').innerHTML = objetoFilme[2]
+       } else {
+        document.getElementById('tagline').remove()
+        console.log('tagline ausente')
+       } //Setar a tagline
+       
+        document.getElementById('sinopse').innerHTML = objetoFilme[1] //Setar a sinopse
+
+        document.getElementById('setCategorias').innerHTML = getCategorias()
+
+        function setDataFilme() {
+            let arrey = objetoFilme[4].split('-').reverse()
+            let data = `${arrey[0]}/${arrey[1]}/${arrey[2]} `
+            return data;
+        }
+
+        function getCategorias() {
+            const getCategorias = `ERRO-API`.split('--')[8].split(',')
+            var categoriasArrey = []
+            
+            for (indice in getCategorias) {
+                if (getCategorias[indice].indexOf('name') > 0) {
+                    categoriasArrey.push(getCategorias[indice]
+                    .replace('"name"=>"','')
+                    .replace('"}','')
+                    .replace(']',''))
+                }
+            }
+           return categoriasArrey.join(',')
+        }
+    </script>
+    
+    <script>  //scripts de players
+         var player4='';var player3='';var player2='';var player1='';
+
+        const players = document.getElementById('players')
+ 
+        const iframeHtml = function(player) {
+            return `<iframe id="iframe" autoplay; picture-in-picture allowfullscreen scrolling="no" src="${player}" frameborder="0"></iframe>`
+        }
+
+        if (player1 != '') {
+            players.innerHTML += `<div class="player" onclick="ClickPlayer('${player1}')" style="background-image: url('ERRO-API');">
+                                    <div class="play"></div>
+                                    <div class="pelicula"></div>
+                                 </div>`
+        }
+        if (player2 != '') {
+            players.innerHTML += `<div class="player" onclick="ClickPlayer('${player2}')" style="background-image: url('ERRO-API');">
+                                    <div class="play"></div>
+                                    <div class="pelicula"></div>
+                                 </div>`
+        }
+        if (player3 != '') {
+            players.innerHTML += `<div class="player" onclick="ClickPlayer('${player3}')" style="background-image: url('ERRO-API');">
+                                    <div class="play"></div>
+                                    <div class="pelicula"></div>
+                                 </div>`
+        }
+        if (player4 != '') {
+            players.innerHTML += `<div class="player" onclick="ClickPlayer('${player4}')" style="background-image: url('ERRO-API');">
+                                    <div class="play"></div>
+                                    <div class="pelicula"></div>
+                                 </div>`
+        }
+
+        $('#closeShare').click(function() {
+            $('#share').fadeOut(500, 'swing')
+        })
+        $('.share-area').click(function() {
+            $('#share').fadeIn(500, 'swing').css('display', 'flex')
+        })
+
+        
+        $('#closeFilmeArea').click(function() {
+            $('#filmeArea').fadeOut(500, 'swing')
+            $('iframe').remove()
+        })
+        $('.assistir-button').click(function() {
+            $('html, body').stop().animate({
+                scrollTop: players.offsetTop - 150
+            },700)
+
+        })
+
+        function ClickPlayer(src) {
+            $('#filmeArea').fadeIn(500, 'swing', function() {
+                $('#embedArea').html(iframeHtml(src))
+            })
+        }
+
+    </script>
+
+<script defer src="/assets/js/styleDefault.js"></script>
+</body>
+</html>
